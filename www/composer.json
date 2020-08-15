@@ -1,0 +1,15 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Hillel\\": "./src"
+    }
+  },
+  "require": {
+    "ext-json": "*",
+    "illuminate/database": "^7.22",
+    "illuminate/events": "^7.22",
+    "fzaninotto/faker": "^1.9",
+    "illuminate/view": "^7.24",
+    "illuminate/routing": "^7.25"
+  }
+}

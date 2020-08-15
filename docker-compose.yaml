@@ -1,0 +1,30 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7.30
+    container_name: db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=sandbox
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=secret
+  php-apache:
+    container_name: my-php-app
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./www/:/var/www/html
+    links:
+      - db
+  phpma:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpma
+    ports:
+      - "8080:80"
+    links:
+      - db

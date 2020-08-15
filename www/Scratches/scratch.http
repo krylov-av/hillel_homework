@@ -1,0 +1,13 @@
+POST http://localhost/test_post.php?r=5
+Content-Type: application/x-www-form-urlencoded
+
+f=55&frt=7hgVveh
+
+
+###
+POST http://localhost/123
+Content-Type: application/x-www-form-urlencoded
+
+f=55&frt=7hgVveh
+
+###
